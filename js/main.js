@@ -3,8 +3,9 @@ const correction_factor = 40;
 
 const btn_set = document.querySelector(".set-delay");
 btn_set.addEventListener("click", () => {
-  delay_ms = document.getElementById("delay-ms").value - correction_factor;
+  delay_ms = document.getElementById("delay-ms").value;
   alert("New delay duration : " + delay_ms + " milliseconds.");
+  delay_ms = delay_ms - correction_factor;
 });
 
 const btn_1 = document.querySelector(".btn-1");
