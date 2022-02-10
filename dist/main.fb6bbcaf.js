@@ -124,12 +124,15 @@ btn_set.addEventListener("click", function () {
   delay_ms = document.getElementById("delay-ms").value;
   alert("New delay duration : " + delay_ms + " milliseconds.");
 });
-var btn_1 = document.querySelector(".btn-1");
-var audio_1 = new Audio("./res/button-rollover.mp3");
-var btn_2 = document.querySelector(".btn-2");
-var audio_2 = new Audio("./res/button-switch.mp3");
-var btn_3 = document.querySelector(".btn-3");
-var audio_3 = new Audio("./res/button-check.mp3");
+var btn_1 = document.querySelector(".btn-1"); // const audio_1 = new Audio("./res/button-rollover.mp3");
+
+var audio_1 = document.getElementById("audio-1");
+var btn_2 = document.querySelector(".btn-2"); // const audio_2 = new Audio("./res/button-switch.mp3");
+
+var audio_2 = document.getElementById("audio-2");
+var btn_3 = document.querySelector(".btn-3"); // const audio_3 = new Audio("./res/button-check.mp3");
+
+var audio_3 = document.getElementById("audio-3");
 btn_1.addEventListener("click", function () {
   setTimeout(function () {
     audio_1.play();
@@ -173,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58166" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54266" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
