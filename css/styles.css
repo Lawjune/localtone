@@ -254,7 +254,7 @@ a {
 }
 
 .btn--outline {
-  background: #fff;
+  background: #d4cece;
   color: var(--color-headings);
   border: 2px solid var(--color-headings);
 }

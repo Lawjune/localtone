@@ -6,6 +6,7 @@
     <meta name="description" content="A Simple Tone Tester." />
 
     <title>A Simple Tone Tester</title>
+    <link rel="shortcut icon" href="#">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
@@ -19,6 +20,7 @@
     <audio id="audio-1" src="/res/button-rollover.mp3"></audio>
     <audio id="audio-2" src="/res/button-check.mp3"></audio>
     <audio id="audio-3" src="/res/button-switch.mp3"></audio>
+    <audio id="music" src="/res/Ben_Lvcas_-_Love_of_My_Life.mp3"></audio>
     <section class="block container block-domain">
       <header class="block__header">
         <h2>Local Tone Demo</h2>
@@ -31,9 +33,9 @@
           placeholder="Please input the delay duration - milliseconds"
         />
         <button class="btn btn--accent set-delay">
-          <svg class="icon icon--white">
-            <use href="images/sprite.svg#clock"></use></svg
-          >Set
+          <!-- <svg class="icon icon--white">
+            <use href="images/sprite.svg#clock"></use></svg> -->
+            Set
         </button>
       </div>
     </section>
@@ -74,6 +76,43 @@
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <div class="callout callout--primary callout-signup">
+        <div class="grid grid--1x2">
+          <div class="callout__content">
+            <h2 class="callout__heading">Try to mix music and button tone</h2>
+          </div>
+          <div class="callout__content btn">
+            <a class="btn btn--secondary btn--stretched btn-music-play">Play</a>
+            <a class="btn btn--accent btn--stretched btn-music-pause">pause</a>
+            <a class="btn btn--outline btn--stretched btn-music-stop">stop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="callout callout--secondary callout-signup">
+        <div class="grid grid--1x2">
+          <div class="callout__content">
+            <h2 class="callout__heading">Try to play queue tones</h2>
+          </div>
+          <div class="callout__content">
+            <input
+              id="interval-ms"
+              type="number"
+              class="input"
+              placeholder="Please input the interval - milliseconds"
+            />
+            <a class="btn btn--primary btn--stretched btn-interval">Try</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
 
     <script src="js/main.js"></script>
   </body>
