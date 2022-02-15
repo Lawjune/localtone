@@ -32,28 +32,43 @@ const play_audio_3 = () => {
 };
 
 btn_1.addEventListener("click", () => {
-  setTimeout(() => play_audio_1(), delay_ms);
+  setTimeout(play_audio_1, delay_ms);
 });
 
 btn_2.addEventListener("click", () => {
-  setTimeout(() => play_audio_2(), delay_ms);
+  setTimeout(play_audio_2, delay_ms);
 });
 
 btn_3.addEventListener("click", () => {
-  setTimeout(() => play_audio_3(), delay_ms);
+  setTimeout(play_audio_3, delay_ms);
 });
 
 const btn_music_play = document.querySelector(".btn-music-play");
-const btn_music_pause = document.querySelector(".btn-music-pause");
-const btn_music_stop = document.querySelector(".btn-music-stop");
+// const btn_music_pause = document.querySelector(".btn-music-pause");
+// const btn_music_stop = document.querySelector(".btn-music-stop");
 const music = document.getElementById("music");
+let music_playing_state = false;
+const play_music = () =>
+{
+  if (music_playing_state)
+  {
+    music_playing_state = false;
+    music.pause();
+    btn_music_play.innerHTML = "play";
+  } else
+  {
+    music_playing_state = true;
+    music.play()
+    btn_music_play.innerHTML = "pause"
+  }
+}
 
-btn_music_play.addEventListener("click", () => music.play());
-btn_music_pause.addEventListener("click", () => music.pause());
-btn_music_stop.addEventListener("click", () => {
-  music.pause();
-  music.currentTime = 0;
-});
+btn_music_play.addEventListener("click", play_music);
+// btn_music_pause.addEventListener("click", () => music.pause());
+// btn_music_stop.addEventListener("click", () => {
+//   music.pause();
+//   music.currentTime = 0;
+// });
 
 const btn_interval = document.querySelector(".btn-interval");
 btn_interval.addEventListener("click", () => {
